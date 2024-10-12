@@ -10,7 +10,7 @@ This project is aimed at reducing the complexity and time spent in editing cooki
 
 ## Mockup
 
-![TastyCuts App Mockup](A mockup of a mobile app called TastyCuts.png)
+![TastyCuts App Mockup](TastyCuts/A%20mockup%20of%20a%20mobile%20app%20called%20TastyCuts.png)
 
 ---
 
