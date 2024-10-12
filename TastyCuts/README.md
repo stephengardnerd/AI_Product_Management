@@ -8,6 +8,12 @@ This project is aimed at reducing the complexity and time spent in editing cooki
 
 ---
 
+## Mockup
+
+![TastyCuts App Mockup](A_mockup_of_a_mobile_app_called_TastyCuts._The_app.png)
+
+---
+
 ## Scenario
 
 As the AI Product Manager at TastyTube, your role is to manage the development of a minimum viable product (MVP) that leverages AI to streamline the video editing process for home chefs. The key objective is to build a mobile application that allows creators to quickly generate and publish polished, engaging cooking videos with minimal manual effort.
@@ -83,4 +89,3 @@ The MVP roadmap was created using the CRISP-DM Agile framework with two-week spr
 1. Clone the repository:
    ```bash
    git clone https://github.com/username/tastycuts.git
-
