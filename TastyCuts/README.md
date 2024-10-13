@@ -10,7 +10,7 @@ This project is aimed at reducing the complexity and time spent in editing cooki
 
 ## Mockup
 
-<img src="TastyCuts.png" alt="TastyCuts App Mockup" width="400" />
+<img src="TastyCuts_mockup.png" alt="TastyCuts App Mockup" width="400" />
 
 ---
 
