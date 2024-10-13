@@ -17,7 +17,7 @@ Using ML/AI in this context provides a significant business benefit by improving
 
 ## Mockup
 
-![MailGeniusAI App Mockup](MailGeniusAI.png)
+<img src="MailGeniusAI.png" alt="MailGeniusAI App Mockup" width="400" />
 
 ---
 
