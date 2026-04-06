@@ -1,0 +1,12 @@
+.env
+*.env
+venv/
+.venv/
+*/lib/python*/
+*/lib/python*/site-packages/
+__pycache__/
+*.pyc
+*.sqlite
+*.db
+.DS_Store
+Thumbs.db
