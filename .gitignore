@@ -4,6 +4,10 @@ venv/
 .venv/
 */lib/python*/
 */lib/python*/site-packages/
+Google ML Project/clean_image/
+Google ML Project/chest_xray/
+Google ML Project/chest_xray.zip
+Google ML Project/AutoMLDataset/
 __pycache__/
 *.pyc
 *.sqlite
