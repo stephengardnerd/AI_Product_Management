@@ -1,46 +1,84 @@
-# Project Proposal: Data Labeling Approach for Pneumonia Detection
+# Medical Image Annotation — Pneumonia Detection
+
+A data-labeling capstone from the Duke AI Product Management program. The goal: help clinicians triage pediatric chest x-rays for pneumonia by building a labeled dataset and a quality-assured annotation job in [Appen](https://www.appen.com/).
+
+**Evaluation framework for this project →** [`../notebooks/01_medical_image_annotation_evaluation.ipynb`](../notebooks/01_medical_image_annotation_evaluation.ipynb)
+
+---
 
 ## Overview
 
-### Project Goal:
-The aim of this project is to help medical professionals, particularly doctors, quickly identify cases of pneumonia in children using machine learning (ML). The project involves the classification of chest x-ray images, with the ultimate goal of developing an ML-based classification tool that can detect pneumonia across large datasets.
+### Project goal
+Help medical professionals — particularly pediatricians — quickly identify cases of pneumonia in children using machine learning. The project covers the data-labeling side of that pipeline: sourcing x-rays, designing the annotation job, and quality-assuring the labels before they feed a downstream classifier.
 
-![Pneumonia Detection Process](./images/image_1.png)
+![Annotated chest x-ray sample](./images/01-annotated-chest-xray.png)
 
-## Data Labels
+---
 
-### Labeling Strategy:
-- **Initial Data**: The dataset consists of 101 images with two existing columns: `img_url` and `label`.
-- **New Labels**: A third column, `title`, was created to assist in further labeling and improve future jobs. This was necessary to prevent mislabeling and reduce the degradation of the job due to hyperlinked labels.
+## Data labels
 
-![Data Labeling](./images/image_2.png)
+### Labeling strategy
+- **Initial data.** 101 images with two columns: `img_url` and `label`.
+- **New column.** A third column, `title`, was added to prevent mislabeling and reduce job degradation caused by hyperlinked labels.
+- **Examples.** Pneumonia-positive x-rays used as anchor examples for annotators:
 
-## Test Questions & Quality Assurance
+![Pneumonia examples](./images/02-pneumonia-examples.png)
 
-### Number of Test Questions:
-- **Test Setup**: Given the small dataset size, eight test questions were developed. Each annotator must complete a verification test after every fifth image classification (5% test).
+---
 
-### Test Question Improvement:
-- **Accuracy Boosting**: For each case where the label is "Pneumonia," the following additional accuracy questions are required:
-  1. Is this a healthy chest x-ray image?
-  2. Are you more than 50% confident that the image depicts signs of pneumonia?
-  3. Can you explain your decision to a medical professional?
+## Test questions and quality assurance
 
-![Test Question Setup](./images/image_3.png)
+### Test setup
+Given the small dataset, **eight** test questions were developed. Each annotator completes a verification test every fifth image (5% test rate).
 
-## Contributor Satisfaction
+### Test question improvement
+For any image labeled "Pneumonia," the job forces three accuracy questions:
+1. Is this a healthy chest x-ray image?
+2. Are you more than 50% confident the image shows signs of pneumonia?
+3. Can you explain your decision to a medical professional?
 
-### Addressing Low Ratings:
-If annotator feedback indicates a rating below 3.5 for test questions or instructions, these areas will be revised. Focus will be placed on improving clarity in the instructions and ensuring that the test questions provide clear steps for annotators to improve accuracy.
+![Consult-doctor test question layout](./images/03-consult-doctor-examples.png)
 
-## Limitations & Improvements
+---
 
-### Data Biases:
-- **Bias in Data**: There is an inherent bias that assumes all images in the dataset show either healthy or pneumonia-related symptoms. Annotators are asked to select "Unknown" when they cannot confidently make a classification.
+## Contributor satisfaction
 
-![Bias in Data](./images/image_4.png)
+If annotator feedback dips below a **3.5/5** rating on test questions or instructions, those areas get revised. Focus is on clarity of instructions and whether the test questions give annotators a clear path to improve accuracy.
 
-### Designing for Longevity:
-- **Future Enhancements**: The labeling job will be periodically retrained to adjust for new medical knowledge and data (e.g., new x-ray types or outlier cases like non-child images). Annotator feedback will be used to ensure long-term accuracy.
+---
 
-![Long-term Design](./images/image_5.png)
+## Limitations and improvements
+
+### Data biases
+The dataset assumes every image is either healthy or pneumonia-related. Annotators can select **"Unknown"** when they can't confidently classify. Ambiguous cases (cloudy images, off-angle captures) were frequent enough to warrant this escape hatch:
+
+![Ambiguous cloudy example](./images/04-ambiguous-cloudy-example.png)
+
+### Designing for longevity
+The labeling job is periodically retrained to adjust for new medical knowledge — new x-ray machine types, outlier cases (e.g., non-child x-rays), annotator feedback. A healthy baseline for comparison:
+
+![Healthy baseline example](./images/05-healthy-example.png)
+
+---
+
+## Files in this folder
+
+| File | What it is |
+|---|---|
+| [`README.md`](README.md) | This document. |
+| [`0_project-proposal_sgardner.docx`](0_project-proposal_sgardner.docx) | Final project proposal, submitted version (embedded images). |
+| [`0_project-proposal.docx`](0_project-proposal.docx) | Earlier proposal draft. |
+| [`1_xray_image_data_extension_labeled.csv`](1_xray_image_data_extension_labeled.csv) | Final labeled dataset used for the Appen job. |
+| [`xray_image_data.csv`](xray_image_data.csv) | Original 101-image dataset, two columns. |
+| [`xray_image_data_extension.csv`](xray_image_data_extension.csv) | Extended dataset with the added `title` column. |
+| [`xray_image_data_extension_labeled.csv`](xray_image_data_extension_labeled.csv) | Extended dataset, fully labeled. |
+| [`preview_layout_example.html`](preview_layout_example.html) | Appen job layout preview (how annotators see the task). |
+| [`example_preview.pdf`](example_preview.pdf) | PDF version of the layout preview. |
+| [`How to create a job in Appen.pdf`](How%20to%20create%20a%20job%20in%20Appen.pdf) | Process documentation for Appen job creation. |
+| [`This is how AI bias really happens...pdf`](This%20is%20how%20AI%20bias%20really%20happens—and%20why%20it%E2%80%99s%20so%20hard%20to%20fix%20%7C%20MIT%20Technology%20Review.pdf) | Reference reading (MIT Technology Review). |
+| [`Medical Image Classification Submission/`](Medical%20Image%20Classification%20Submission/) | Final submission bundle for the capstone. |
+| [`images/`](images/) | Figures used in this README and the proposal. |
+
+---
+
+**Author:** Stephen D. Gardner
