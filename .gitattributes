@@ -1,0 +1,4 @@
+# Annotation tool preview layouts are reference artifacts, not source code.
+# Exclude them from language detection so the card reflects the real work
+# (Jupyter notebooks and React portfolio UI).
+Medical\ Image\ Annotation\ Project/**/*.html linguist-documentation
