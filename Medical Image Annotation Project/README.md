@@ -11,7 +11,9 @@ A data-labeling capstone from the Duke AI Product Management program. The goal: 
 ### Project goal
 Help medical professionals — particularly pediatricians — quickly identify cases of pneumonia in children using machine learning. The project covers the data-labeling side of that pipeline: sourcing x-rays, designing the annotation job, and quality-assuring the labels before they feed a downstream classifier.
 
-![Annotated chest x-ray sample](./images/01-annotated-chest-xray.png)
+<p align="center">
+  <img src="./images/01-annotated-chest-xray.png" alt="Annotated chest x-ray sample" width="500"/>
+</p>
 
 ---
 
@@ -22,7 +24,9 @@ Help medical professionals — particularly pediatricians — quickly identify c
 - **New column.** A third column, `title`, was added to prevent mislabeling and reduce job degradation caused by hyperlinked labels.
 - **Examples.** Pneumonia-positive x-rays used as anchor examples for annotators:
 
-![Pneumonia examples](./images/02-pneumonia-examples.png)
+<p align="center">
+  <img src="./images/02-pneumonia-examples.png" alt="Pneumonia examples" width="500"/>
+</p>
 
 ---
 
@@ -37,7 +41,9 @@ For any image labeled "Pneumonia," the job forces three accuracy questions:
 2. Are you more than 50% confident the image shows signs of pneumonia?
 3. Can you explain your decision to a medical professional?
 
-![Consult-doctor test question layout](./images/03-consult-doctor-examples.png)
+<p align="center">
+  <img src="./images/03-consult-doctor-examples.png" alt="Consult-doctor test question layout" width="500"/>
+</p>
 
 ---
 
@@ -52,12 +58,16 @@ If annotator feedback dips below a **3.5/5** rating on test questions or instruc
 ### Data biases
 The dataset assumes every image is either healthy or pneumonia-related. Annotators can select **"Unknown"** when they can't confidently classify. Ambiguous cases (cloudy images, off-angle captures) were frequent enough to warrant this escape hatch:
 
-![Ambiguous cloudy example](./images/04-ambiguous-cloudy-example.png)
+<p align="center">
+  <img src="./images/04-ambiguous-cloudy-example.png" alt="Ambiguous cloudy example" width="500"/>
+</p>
 
 ### Designing for longevity
 The labeling job is periodically retrained to adjust for new medical knowledge — new x-ray machine types, outlier cases (e.g., non-child x-rays), annotator feedback. A healthy baseline for comparison:
 
-![Healthy baseline example](./images/05-healthy-example.png)
+<p align="center">
+  <img src="./images/05-healthy-example.png" alt="Healthy baseline example" width="500"/>
+</p>
 
 ---
 
