@@ -1,10 +1,16 @@
-# AI Product Management 
+# AI Product Management
 
 ![Banner](assets/banner.png)
 
 ![Python version](https://img.shields.io/badge/Python-3.x-blue.svg)
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Status](https://img.shields.io/badge/Status-Completed-success.svg)
+
+**Live site →** [stephengardnerd.github.io/AI_Product_Management](https://stephengardnerd.github.io/AI_Product_Management)
+**Runnable notebooks →** [`/notebooks`](notebooks/)
+**Web UI source →** [`/web`](web/)
 
 ## Executive Summary
 This repository functions as a definitive playbook and portfolio highlighting comprehensive AI Product Management execution. It demonstrates a capacity to bridge empirical data science with commercial enterprise value, showcasing high-velocity methodologies for AI tool integration, model evaluation, and product lifecycle scoping. The objective is to establish predictable, ethical, and highly scaleable autonomous data product launches.
@@ -46,6 +52,24 @@ gantt
 
 ## Usage
 Explore module directories to access direct strategy documentation, operational frameworks, and comprehensive project evaluations spanning from initial inception to scalable enterprise deployments.
+
+## Runnable Notebooks
+
+Three Jupyter notebooks in [`/notebooks`](notebooks/) put the frameworks into executable code on public/synthetic datasets:
+
+| Notebook | Topic |
+|---|---|
+| [`01_medical_image_annotation_evaluation.ipynb`](notebooks/01_medical_image_annotation_evaluation.ipynb) | Per-class precision/recall/F1, confusion matrix, ROC, threshold sweep. |
+| [`02_build_vs_buy_economic_model.ipynb`](notebooks/02_build_vs_buy_economic_model.ipynb) | 24-month TCO model, break-even curve, sensitivity analysis. |
+| [`03_bias_fairness_audit.ipynb`](notebooks/03_bias_fairness_audit.ipynb) | Demographic parity + equalized odds with reweighting mitigation. |
+
+```bash
+cd notebooks && pip install -r requirements.txt && jupyter notebook
+```
+
+## Web UI
+
+A Vite + React + TypeScript + Tailwind site in [`/web`](web/) renders the portfolio at [stephengardnerd.github.io/AI_Product_Management](https://stephengardnerd.github.io/AI_Product_Management). GitHub Actions auto-deploys on every push to `main` that touches `web/`.
 
 ---
 **Author:** Stephen D. Gardner
